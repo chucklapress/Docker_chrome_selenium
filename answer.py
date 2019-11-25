@@ -1,28 +1,3 @@
-## Dockerfile and example test
-
-## Resources in this project
-
-Simplest implemetation is to just pull from Docker hub
-
-```sh
-docker pull chucklapress/chrome:v1
-```
-
-## What's in the image
-
-This is a bloat Ubuntu 18.04 image with a full one Python3 development suite  
-The image includes Chromedriver meant to be run headless.  
-
-```sh
-docker run -it <image> /bin/bash
-```
-Then:  
-```sh
-touch answer.py
-```
-Then:  
-
-```python
 import time
 from lxml import html
 from selenium import webdriver
@@ -100,8 +75,3 @@ def parse(url):
 if __name__ == '__main__':
 
     parse('https://lunarosagelato.com/gelateria')
-
-```
-Will result in the creation of a file named "flavors.txt"  
-IMPORTANT TO NOTE chrome_options.add_argument('--disable-dev-shm-usage') needed to run  
-Chrome seem to crash in Docker containers on certain pages due to too small /dev/shm. So you may have to fix the small /dev/shm size.
