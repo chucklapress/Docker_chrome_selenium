@@ -5,9 +5,9 @@
 Simplest implemetation is to just pull from Docker hub
 
 ```sh
-docker pull chucklapress/chrome:v1
+docker pull chucklapress/chrome:v3
 ```
-
+current version 3
 ## What's in the image
 
 This is a bloat Ubuntu 18.04 image with a full one Python3 development suite  
