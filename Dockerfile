@@ -27,3 +27,6 @@ RUN apt-get install -y python3-venv
 # install selenium
 RUN pip3 install selenium==3.8.0
 RUN pip3 install lxml==4.4.2
+
+# install application
+ADD answer.py /
