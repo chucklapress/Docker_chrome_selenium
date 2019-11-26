@@ -43,4 +43,4 @@ IMPORTANT TO NOTE chrome_options.add_argument('--disable-dev-shm-usage') needed 
 Chrome seem to crash in Docker containers on certain pages due to too small /dev/shm. So you may have to fix the small /dev/shm size.  
 
 When running the Docker image you may have to prime the pump once with  
-answer.py as it misses the ifram element the first time inconsistently.
+answer.py as it misses the iframe element the first time inconsistently.
