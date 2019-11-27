@@ -10,7 +10,7 @@ docker pull chucklapress/chrome:latest
 current version latest
 ## What's in the image
 
-This is a bloat Ubuntu 18.04 image with a full one Python3 development suite  
+This is a bloat Ubuntu 18.04 image with a full on Python3 development suite  
 The image includes Chromedriver meant to be run headless.  
 
 ```sh
@@ -43,4 +43,15 @@ IMPORTANT TO NOTE chrome_options.add_argument('--disable-dev-shm-usage') needed 
 Chrome seem to crash in Docker containers on certain pages due to too small /dev/shm. So you may have to fix the small /dev/shm size.  
 
 When running the Docker image you may have to prime the pump once with  
-answer.py as it misses the iframe element the first time inconsistently.
+answer.py as it misses the iframe element the first time inconsistently.  
+You will definately need to massage and play with the environment, most recent  
+changes are the additions of:  
+```python
+import os
+import locale
+os.environ["PYTHONIOENCODING"] = "utf-8"
+myLocale=locale.setlocale(category=locale.LC_ALL, locale="en_US.UTF-8")
+```  
+In the answer.py script, and apt-get install -y language-pack-en  
+in the Dockerfile to stop any unicode to utf8 error in the call to print.  
+So YMMV.
