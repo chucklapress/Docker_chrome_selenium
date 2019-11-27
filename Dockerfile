@@ -23,6 +23,7 @@ ENV DISPLAY=:99
 RUN apt-get install -y python3-pip
 RUN apt-get install -y build-essential libssl-dev libffi-dev python3-dev
 RUN apt-get install -y python3-venv
+RUN apt-get install -y language-pack-en
 
 # install selenium
 RUN pip3 install selenium==3.8.0
