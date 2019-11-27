@@ -29,5 +29,8 @@ RUN apt-get install -y language-pack-en
 RUN pip3 install selenium==3.8.0
 RUN pip3 install lxml==4.4.2
 
+# install text editor
+RUN apt-get install -y nano
+
 # install application
 ADD answer.py /
