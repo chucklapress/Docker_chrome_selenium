@@ -42,10 +42,12 @@ your call as to what you'd like to build in here
 IMPORTANT TO NOTE chrome_options.add_argument('--disable-dev-shm-usage') needed to run  
 Chrome seem to crash in Docker containers on certain pages due to too small /dev/shm. So you may have to fix the small /dev/shm size.  
 
-When running the Docker image you may have to prime the pump once with  
-answer.py as it misses the iframe element the first time inconsistently.  
+Corrected issue with iframe elements not being found by increasing  
+the time.sleep to (10) on find_element_by_tag_name('iframe')  
+
 You will definately need to massage and play with the environment, most recent  
 changes are the additions of:  
+  
 ```python
 import os
 import locale

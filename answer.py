@@ -16,7 +16,7 @@ def parse(url):
     response = driver
     response.get(url)
     iframeElement = response.find_element_by_tag_name('iframe')
-    time.sleep(4)
+    time.sleep(10)
     response.switch_to.frame(iframeElement)
     time.sleep(3)
     ge1keyElement = response.find_element_by_xpath('//*[@id="locu-medium-container"]/div[1]/div/div/div[10]/div[1]/div[1]/div[1]')
