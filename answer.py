@@ -1,3 +1,4 @@
+#!/usr/bin/python3 
 import time
 from lxml import html
 from selenium import webdriver

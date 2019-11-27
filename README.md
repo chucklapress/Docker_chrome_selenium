@@ -18,8 +18,9 @@ docker run -it <image> /bin/bash
 ```
 Then:  
 ```sh
-python3 answer.py
-```
+./answer.py
+```  
+I made the python script executable from the command line
 results in file added named flavors.txt with current gelato flavors  
 
 Feel free to add your own selenium tests
@@ -47,7 +48,7 @@ the time.sleep to (10) on find_element_by_tag_name('iframe')
 
 You will definately need to massage and play with the environment, most recent  
 changes are the additions of:  
-  
+
 ```python
 import os
 import locale

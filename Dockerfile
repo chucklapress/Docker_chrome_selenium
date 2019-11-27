@@ -34,3 +34,4 @@ RUN apt-get install -y nano
 
 # install application
 ADD answer.py /
+RUN chmod 755 ./answer.py
