@@ -43,8 +43,10 @@ your call as to what you'd like to build in here
 IMPORTANT TO NOTE chrome_options.add_argument('--disable-dev-shm-usage') needed to run  
 Chrome seem to crash in Docker containers on certain pages due to too small /dev/shm. So you may have to fix the small /dev/shm size.  
 
-Corrected issue with iframe elements not being found by increasing  
-the time.sleep to (10) on find_element_by_tag_name('iframe')  
+##
+UPDATE
+05/23/2020
+Streamlined again to not require the additional time for switching to i-frame as web owner eliminated that, also limited selections on scrape due to corona pandemic 
 
 You will definately need to massage and play with the environment, most recent  
 changes are the additions of:  
