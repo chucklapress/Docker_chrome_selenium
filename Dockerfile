@@ -41,3 +41,6 @@ RUN ./answer.py
 
 # pipe output
 RUN cat flavors.txt > /temp_output.txt
+
+# echo file to console
+RUN cat /temp_output.txt
