@@ -35,12 +35,3 @@ RUN apt-get install -y nano
 # install application
 ADD answer.py /
 RUN chmod 755 ./answer.py
-
-# run script
-RUN ./answer.py
-
-# pipe output
-RUN cat flavors.txt > /temp_output.txt
-
-# echo file to console
-RUN cat /temp_output.txt
