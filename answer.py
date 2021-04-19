@@ -4,6 +4,12 @@ from lxml import html
 from selenium import webdriver
 import os
 import locale
+# This eliminates the failure from running the script multiple times
+if os.path.exists("flavors.txt"):
+    os.remove("flavors.txt")
+else:
+    print('no flavors file')
+# Setup for headless chrome operations
 os.environ["PYTHONIOENCODING"] = "utf-8"
 myLocale=locale.setlocale(category=locale.LC_ALL, locale="en_US.UTF-8")
 chrome_options = webdriver.ChromeOptions()
